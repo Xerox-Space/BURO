@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    
+
 }
 
 .container {
@@ -12,7 +12,11 @@
 body {
     background-color: #1C1917;
     font-family: "Inter", sans-serif;
+    /* font-family: "comic-sans-ms", sans-serif; */
+    font-style: normal;
+    font-weight: 400;
 }
+
 /* 
 .inter-<uniquifier> {
   font-family: "Inter", sans-serif;
@@ -27,7 +31,7 @@ body {
     font-weight: bold;
     color: #D7CCC8;
     font-size: 24px;
-    
+
 }
 
 .header {
@@ -45,7 +49,7 @@ body {
     list-style: none;
     display: flex;
     text-indent: 36px;
-    font-family: "Inter", sans-serif; 
+    font-family: "Inter", sans-serif;
     font-size: 15px;
     font-weight: bold;
     color: #A89A90;
@@ -104,6 +108,7 @@ a {
     margin-bottom: 20px;
     text-transform: uppercase;
 }
+
 .first-content h1 {
     font-size: 52px;
     font-weight: bold;
@@ -183,7 +188,7 @@ a {
     color: #7A6B60;
     font-style: italic;
     margin-top: 10px;
-}   
+}
 
 /* background: #70669A;
 background: linear-gradient(90deg, rgba(112, 102, 154, 1) 0%, rgba(107, 112, 72, 1) 100%); */
@@ -327,22 +332,31 @@ background: linear-gradient(90deg, rgba(112, 102, 154, 1) 0%, rgba(107, 112, 72,
 }
 
 .catalog-card {
-    background-color: #211C1B;
-    border: 1px solid #2D2624;
+    background: linear-gradient(0deg, rgba(51, 45, 41, 1) 0%, rgba(36, 31, 28, 1) 100%);
+    border: 1px solid #382E28;
     border-radius: 24px;
-    padding: 30px 24px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
-    min-width: 320px;
-    height: 800px; 
+    justify-content: space-between;
     box-sizing: border-box;
+    overflow: hidden; /* Щоб картинка не вилізала за заокруглені кути картки */
 }
 
 
 .card-top {
-    /* Тут може бути ваша картинка або фон */
-    height: 450px; 
+    width: 100%;
+    height: 220px; /* Задай комфортну висоту для фото */
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #211C1B;
+}
+.card-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Розтягує картинку без спотворення пропорцій */
+    display: block;
 }
 
 /* Бейдж */
@@ -407,4 +421,289 @@ background: linear-gradient(90deg, rgba(112, 102, 154, 1) 0%, rgba(107, 112, 72,
 .catalog-card a:hover {
     background-color: #4A3E39;
     color: #FFFFFF;
+}
+/* 
+p {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+} */
+
+/* ==========================================
+   СЕКЦІЯ КАСТОМІЗАЦІЇ ПЛИТ
+========================================== */
+
+.customization-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.customization-intro {
+    margin-bottom: 40px;
+}
+
+.customization-intro .badge {
+    display: inline-block;
+    background-color: #382F29;
+    color: #9A7B66;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #52453C;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.customization-intro h2 {
+    font-size: 38px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0 0 10px 0;
+}
+
+.customization-intro p {
+    color: #A89A90;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Сітка для карток кастомізатора */
+.customization-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Ліва картка (Прев'ю плити) */
+.plate-preview {
+    background-color: #211C1B;
+    border: 1px solid #2D2624;
+    border-radius: 24px;
+    padding: 0 0 35px 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+.plate-preview-header {
+    width: 100%;
+    background: linear-gradient(180deg, #2A231F 0%, #211C1B 100%);
+    border-bottom: 1px solid #2D2624;
+    padding: 30px 0 20px 0;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plate-preview .cross {
+    font-size: 26px;
+    color: #D1C9C3;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.plate-subtitle {
+    font-size: 11px;
+    font-weight: bold;
+    color: #9E938B;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.plate-preview h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0 0 20px 0;
+    padding: 0 20px;
+}
+
+.plate-years {
+    font-size: 14px;
+    color: #9E938B;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.plate-preview .test {
+    font-size: 12px;
+    color: #7A6B60;
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 35px;
+    padding: 0 30px;
+    max-width: 320px;
+}
+
+.plate-quote {
+    font-size: 13px;
+    color: #7A6B60;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 320px;
+}
+
+.plate-preview .btn-dark {
+    margin-top: auto;
+    background-color: #26201D;
+    border: 1px solid #382F2A;
+    color: #A89A90;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
+.plate-preview .btn-dark:hover {
+    background-color: #362C29;
+    color: #FFFFFF;
+}
+
+/* Права картка (Конструктор) */
+.plate-builder {
+    background-color: #211C1B;
+    border: 1px solid #2D2624;
+    border-radius: 24px;
+    padding: 40px 35px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.plate-builder > h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0 0 25px 0;
+}
+
+.builder-step {
+    margin-bottom: 25px;
+}
+
+.builder-step p {
+    font-size: 13px;
+    color: #A89A90;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+/* Сітка кнопок вибору шрифтів та шаблонів */
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.option-btn {
+    background-color: #2A231F;
+    border: 1px solid #382E28;
+    color: #A89A90;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    padding: 14px 16px;
+    border-radius: 12px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Активна/вибрана кнопка з помаранчевою рамкою, як на макеті */
+.option-btn.active, 
+.option-btn:hover {
+    border-color: #8C6A53;
+    color: #FFFFFF;
+    background-color: #302824;
+}
+
+/* Велика кнопка збереження внизу конструктора */
+.plate-builder .save-btn {
+    margin-top: 10px;
+    background: linear-gradient(90deg, #8A6E59 0%, #735745 100%);
+    border: none;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 16px;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    transition: opacity 0.3s;
+}
+
+.plate-builder .save-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* ==========================================
+   ФУТЕР
+========================================== */
+
+.footer {
+    background-color: #161312;
+    border-top: 1px solid #241F1C;
+    padding: 60px 0;
+    margin-top: 80px;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-left .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    color: #7A6B60;
+    font-size: 13px;
+    margin: 0;
+    max-width: 350px;
+    line-height: 1.4;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right {
+    color: #7A6B60;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.footer-right .phone {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.footer-right .phone-note {
+    color: #7A6B60;
+    font-size: 12px;
+    margin: 0;
 }
