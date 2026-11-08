@@ -340,13 +340,13 @@ background: linear-gradient(90deg, rgba(112, 102, 154, 1) 0%, rgba(107, 112, 72,
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
-    overflow: hidden; /* Щоб картинка не вилізала за заокруглені кути картки */
+    overflow: hidden;
 }
 
 
 .card-top {
     width: 100%;
-    height: 220px; /* Задай комфортну висоту для фото */
+    height: 220px; 
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 20px;
@@ -355,11 +355,10 @@ background: linear-gradient(90deg, rgba(112, 102, 154, 1) 0%, rgba(107, 112, 72,
 .card-top img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Розтягує картинку без спотворення пропорцій */
+    object-fit: cover; 
     display: block;
 }
 
-/* Бейдж */
 .catalog-card span {
     display: inline-block;
     background-color: #382F2B;
@@ -373,7 +372,7 @@ background: linear-gradient(90deg, rgba(112, 102, 154, 1) 0%, rgba(107, 112, 72,
     width: fit-content;
 }
 
-/* Назва */
+
 .catalog-card h3 {
     font-size: 22px;
     font-weight: bold;
@@ -381,7 +380,7 @@ background: linear-gradient(90deg, rgba(112, 102, 154, 1) 0%, rgba(107, 112, 72,
     color: #FFFFFF;
 }
 
-/* Опис */
+
 .catalog-card p {
     color: #9E938B;
     font-size: 13px;
@@ -389,7 +388,7 @@ background: linear-gradient(90deg, rgba(112, 102, 154, 1) 0%, rgba(107, 112, 72,
     margin: 0 0 20px 0;
 }
 
-/* Нижня частина картки (ціна + кнопка в рядок) */
+
 .card-bottom {
     display: flex;
     justify-content: space-between;
@@ -398,14 +397,14 @@ background: linear-gradient(90deg, rgba(112, 102, 154, 1) 0%, rgba(107, 112, 72,
     padding-top: 20px;
 }
 
-/* Ціна */
+
 .catalog-price {
     font-size: 24px;
     font-weight: bold;
     color: #FFFFFF;
 }
 
-/* Кнопка "В корзину" */
+
 .catalog-card a {
     background-color: #382F2B;
     color: #D1C9C3;
@@ -427,13 +426,11 @@ p {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 } */
 
-/* ==========================================
-   СЕКЦІЯ КАСТОМІЗАЦІЇ ПЛИТ
-========================================== */
+
 
 .customization-section {
     max-width: 1200px;
-    margin: 80px auto;
+    margin: 80px 0px auto;
     padding: 0 20px;
     font-family: "Inter", sans-serif;
 }
@@ -469,7 +466,7 @@ p {
     margin: 0;
 }
 
-/* Сітка для карток кастомізатора */
+
 .customization-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -477,7 +474,6 @@ p {
     align-items: stretch;
 }
 
-/* Ліва картка (Прев'ю плити) */
 .plate-preview {
     background-color: #211C1B;
     border: 1px solid #2D2624;
@@ -600,7 +596,7 @@ p {
     margin-bottom: 12px;
 }
 
-/* Сітка кнопок вибору шрифтів та шаблонів */
+
 .options-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -620,7 +616,7 @@ p {
     transition: all 0.3s ease;
 }
 
-/* Активна/вибрана кнопка з помаранчевою рамкою, як на макеті */
+
 .option-btn.active, 
 .option-btn:hover {
     border-color: #8C6A53;
@@ -628,7 +624,7 @@ p {
     background-color: #302824;
 }
 
-/* Велика кнопка збереження внизу конструктора */
+
 .plate-builder .save-btn {
     margin-top: 10px;
     background: linear-gradient(90deg, #8A6E59 0%, #735745 100%);
@@ -649,9 +645,6 @@ p {
 }
 
 
-/* ==========================================
-   ФУТЕР
-========================================== */
 
 .footer {
     background-color: #161312;
@@ -706,4 +699,90 @@ p {
     color: #7A6B60;
     font-size: 12px;
     margin: 0;
+}
+
+
+
+.btn-gradient {
+    background: linear-gradient(90deg, #70669A 0%, #6B7048 50%, #70669A 100%);
+    background-size: 200% auto;
+    padding: 12px 24px;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+    transition: background-position 0.6s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-gradient:hover {
+    background-position: right center; /* Зсуває градієнт, створюючи ефект переливу */
+    transform: translateY(-2px);       /* Легке підняття вгору */
+}
+
+
+.catalog-section {
+    max-width: 1200px;
+    margin: 20px auto; 
+    padding: 20px 30px; 
+    font-family: "Inter", sans-serif;
+    color: #fff;
+}
+
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    overflow: visible;
+    padding: 15px 5px;
+}
+
+
+.catalog-card {
+    background: linear-gradient(0deg, rgba(51, 45, 41, 1) 0%, rgba(36, 31, 28, 1) 100%);
+    border: 1px solid #382E28;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: visible;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+
+.card-top {
+    width: 100%;
+    height: 220px; 
+    border-radius: 16px;
+    overflow: hidden; 
+    margin-bottom: 20px;
+    background-color: #211C1B;
+}
+
+.card-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+
+.catalog-card:hover {
+    transform: scale(1.03);
+    border-color: #70669A;  
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    z-index: 50;
+}   
+
+.headrr {
+    color: #A89A90;
+}
+
+.headrr:hover {
+    color: #e2d7cf;
 }
